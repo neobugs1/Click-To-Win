@@ -117,10 +117,29 @@ namespace Clicker
         {
             scene.points.buyUpgrade(scene.Portal);
         }
+        public static string RoundUpNumber(double num)
+        {
+            if (num < 1000)
+                return num.ToString();
+            if (num >= 1000 && num < 1000000)
+                return (Math.Round(Convert.ToDecimal(num) / 1000, 1)).ToString() + "K";
+            if (num >= 1000000 && num < 1000000000)
+                return (Math.Round(Convert.ToDecimal(num) / 1000000, 1)).ToString() + "M";
+            if (num >= 1000000000 && num < 1000000000000)
+                return (Math.Round(Convert.ToDecimal(num) / 1000000000, 1)).ToString() + "B";
+            if (num >= 1000000000000 && num < 1000000000000000)
+                return (Math.Round(Convert.ToDecimal(num) / 1000000000000, 1)).ToString() + "T";
+            if (num >= 1000000000000000 && num < 1000000000000000000)
+                return (Math.Round(Convert.ToDecimal(num) / 1000000000000000, 1)).ToString() + "Qa";
+            if (num >= 1000000000000000000)
+                return (Math.Round(Convert.ToDecimal(num) / 1000000000000000000, 1)).ToString() + "Qi";
+            else
+                return "Олабави";
+        }
         public void updateLabels()
         {
             labelClicksPerSecond.Text = String.Format("{0} поени/сек", scene.points.PpS.ToString("0.00"));
-            labelClicks.Text = String.Format("{0} поени", (int)scene.points.points);
+            labelClicks.Text = String.Format("{0} поени", RoundUpNumber(scene.points.points));
             labelAmountAuto.Text = String.Format("Вкупно: {0}", scene.AutoClicker.Amount);
             labelAutoClicker.Text = String.Format("{0} поени", scene.AutoClicker.Cost.ToString(".00"));
             labelAmountEmp.Text = String.Format("Вкупно: {0}", scene.Employee.Amount);

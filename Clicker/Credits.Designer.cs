@@ -31,6 +31,7 @@ namespace Clicker
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,11 +52,21 @@ namespace Clicker
             this.label2.TabIndex = 1;
             this.label2.Text = "- Никола Смилески: 193265";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "- Методиј Бужаровски: 193155";
+            // 
             // Credits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(224, 106);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Credits";
@@ -69,5 +80,6 @@ namespace Clicker
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
