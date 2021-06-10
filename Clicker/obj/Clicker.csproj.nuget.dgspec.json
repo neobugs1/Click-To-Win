@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Meto\\Desktop\\Click-To-Win-master\\Clicker\\Clicker.csproj": {}
+    "C:\\Users\\Nikola\\source\\repos\\Clicker\\Clicker\\Clicker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Meto\\Desktop\\Click-To-Win-master\\Clicker\\Clicker.csproj": {
+    "C:\\Users\\Nikola\\source\\repos\\Clicker\\Clicker\\Clicker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Meto\\Desktop\\Click-To-Win-master\\Clicker\\Clicker.csproj",
+        "projectUniqueName": "C:\\Users\\Nikola\\source\\repos\\Clicker\\Clicker\\Clicker.csproj",
         "projectName": "Clicker",
-        "projectPath": "C:\\Users\\Meto\\Desktop\\Click-To-Win-master\\Clicker\\Clicker.csproj",
-        "packagesPath": "C:\\Users\\Meto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Meto\\Desktop\\Click-To-Win-master\\Clicker\\obj\\",
+        "projectPath": "C:\\Users\\Nikola\\source\\repos\\Clicker\\Clicker\\Clicker.csproj",
+        "packagesPath": "C:\\Users\\Nikola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nikola\\source\\repos\\Clicker\\Clicker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Meto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nikola\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -29,8 +29,8 @@ namespace Clicker
         {
             Amount++;
             totalCpS += CpS;
-            Cost *= 1.2;
-            CpS *= 1.15;
+            Cost *= 1.15;
+            CpS *= 1.11;
         }
         public override string ToString()
         {

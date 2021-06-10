@@ -10,6 +10,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using WMPLib;
 
 namespace Clicker
 {
@@ -66,6 +68,8 @@ namespace Clicker
         public bool btnLock7 = false;
         public bool btnLock8 = false;
         */
+        //private SoundPlayer soundPlayer;
+
         public int timerCount = 0;
         public Scene scene { get; set; }
         public Form1()
@@ -79,6 +83,11 @@ namespace Clicker
             groupBox2.SendToBack();
             groupBox3.SendToBack();
         }
+        private void playRegister()
+        {
+            SoundPlayer soundPlayer = new SoundPlayer("cash register.wav");
+            soundPlayer.Play();
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -89,33 +98,39 @@ namespace Clicker
         {
             scene.points.points += scene.Clicker.clickValue;
             scene.Clicker.amountOfClicks++;
-            labelClicks.Text = String.Format("{0} поени", (int)scene.points.points);
+            labelClicks.Text = String.Format("{0} поени", RoundUpNumber(scene.points.points));
         }
         private void btnAutoClicker_Click(object sender, EventArgs e)
         {
             scene.points.buyUpgrade(scene.AutoClicker);
+            playRegister();
         }
         
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             scene.points.buyUpgrade(scene.Employee);
+            playRegister();
         }
         private void btnFarm_Click(object sender, EventArgs e)
         {
             scene.points.buyUpgrade(scene.Farm);
+            playRegister();
         }
         private void btnFactory_Click(object sender, EventArgs e)
         {
             scene.points.buyUpgrade(scene.Factory);
+            playRegister();
         }
 
         private void btnLab_Click(object sender, EventArgs e)
         {
             scene.points.buyUpgrade(scene.Lab);
+            playRegister();
         }
         private void btnPortal_Click(object sender, EventArgs e)
         {
             scene.points.buyUpgrade(scene.Portal);
+            playRegister();
         }
         public static string RoundUpNumber(double num)
         {
@@ -295,12 +310,16 @@ namespace Clicker
         {
             pictureBox1.Width -= 2;
             pictureBox1.Height -= 2;
+            SoundPlayer soundPlayer = new SoundPlayer("click1.wav");
+            soundPlayer.Play();
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             pictureBox1.Width += 2;
             pictureBox1.Height += 2;
+            SoundPlayer soundPlayer = new SoundPlayer("click2.wav");
+            soundPlayer.Play();
         }
 
 
@@ -342,96 +361,112 @@ namespace Clicker
         {
             scene.points.buyPurchase(scene.DoubleClick1, scene.Clicker);
             scene.btnDoubleLock1 = true;
+            playRegister();
         }
 
         private void btnDoubleClick2_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick2, scene.Clicker);
             scene.btnDoubleLock2 = true;
+            playRegister();
         }
 
         private void btnDoubleClick3_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick3, scene.Clicker);
             scene.btnDoubleLock3 = true;
+            playRegister();
         }
 
         private void btnDoubleClick4_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick4, scene.Clicker);
             scene.btnDoubleLock4 = true;
+            playRegister();
         }
 
         private void btnDoubleClick5_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick5, scene.Clicker);
             scene.btnDoubleLock5 = true;
+            playRegister();
         }
 
         private void btnDoubleClick6_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick6, scene.Clicker);
             scene.btnDoubleLock6 = true;
+            playRegister();
         }
 
         private void btnDoubleClick7_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick7, scene.Clicker);
             scene.btnDoubleLock7 = true;
+            playRegister();
         }
 
         private void btnDoubleClick8_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.DoubleClick8, scene.Clicker);
             scene.btnDoubleLock8 = true;
+            playRegister();
         }
 
         private void btnMultiplier_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier1, scene.Clicker);
             scene.btnLock1 = true;
+            playRegister();
         }
 
         private void btnMultiplier2_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier2, scene.Clicker);
             scene.btnLock2 = true;
+            playRegister();
         }
 
         private void btnMultiplier3_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier3, scene.Clicker);
             scene.btnLock3 = true;
+            playRegister();
         }
 
         private void btnMultiplier4_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier4, scene.Clicker);
             scene.btnLock4 = true;
+            playRegister();
         }
 
         private void btnMultiplier5_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier5, scene.Clicker);
             scene.btnLock5 = true;
+            playRegister();
         }
 
         private void btnMultiplier6_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier6, scene.Clicker);
             scene.btnLock6 = true;
+            playRegister();
         }
 
         private void btnMultiplier7_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier7, scene.Clicker);
             scene.btnLock7 = true;
+            playRegister();
         }
 
         private void btnMultiplier8_Click(object sender, EventArgs e)
         {
             scene.points.buyPurchase(scene.Multiplier8, scene.Clicker);
             scene.btnLock8 = true;
+            playRegister();
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -596,7 +631,7 @@ namespace Clicker
 
         private void btnWin_MouseHover(object sender, EventArgs e)
         {
-            toolTip1.Show("Победа", btnWin);
+            toolTip1.Show("Победа.\nЦена: 10000000", btnWin);
 
         }
 

@@ -79,10 +79,10 @@ namespace Clicker
             Clicker = new Click();
             AutoClicker = new Upgrade(10, 0, 0.1);
             Employee = new Upgrade(100, 0, 1.0);
-            Farm = new Upgrade(1100, 0, 10);
-            Factory = new Upgrade(12000, 0, 35);
-            Lab = new Upgrade(50000, 0, 80);
-            Portal = new Upgrade(1000000, 0, 600);
+            Farm = new Upgrade(1100, 0, 8);
+            Factory = new Upgrade(12000, 0, 47);
+            Lab = new Upgrade(130000, 0, 260);
+            Portal = new Upgrade(1400000, 0, 1400);
             DoubleClick1 = new Purchase(100, 2);
             DoubleClick2 = new Purchase(1000, 2);
             DoubleClick3 = new Purchase(1000, 2);
