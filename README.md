@@ -1,5 +1,5 @@
 # Click To Win
-Проектна задача по предметот Визуелно Програмирање: Click To Win.<br><br>
+Click To Win e инкрементална игра, инспирирана од Cookie Clicker.<br><br>
 ![gui](https://github.com/Metodij-Buzharovski/Click-To-Win/assets/81751906/4d106833-8434-493b-a62b-93d06c002c89)
 
 ___
